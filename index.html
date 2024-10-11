@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Cadastro</title>
-    <link rel="stylesheet" href="bootstrap/style.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/style.css">
 </head>
 
 <body>
-    <div class="container">
-        <form name="frmCadastro">
+    <div class="container bg-white text-dark  mt-5">
+        <form name="frmCadastro" class="p-3">
+            <h1 class="my-3 text-center">Formulário de Cadastro</h1>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="nome">Nome Completo</label>
@@ -23,8 +24,7 @@
                 </div>
                 <div class="form-group col-md-6">
                     <label for="cpf">CPF</label>
-                    <input type="text" class="form-control" id="cpf" name="txtCPF"
-                        placeholder="Somente os números">
+                    <input type="text" class="form-control" id="cpf" name="txtCPF" placeholder="Somente os números">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="cep">CEP</label>
@@ -34,7 +34,8 @@
             </div>
             <div class="form-group">
                 <label for="logradouro">Endereço</label>
-                <input type="text" class="form-control" id="logradouro" placeholder="Rua dos Bobos, nº 0" name="txtLogradouro">
+                <input type="text" class="form-control" id="logradouro" placeholder="Rua dos Bobos, nº 0"
+                    name="txtLogradouro">
             </div>
             <div class="form-group">
                 <label for="bairro">Bairro</label>
@@ -64,14 +65,18 @@
                     <label for="ddd">DDD</label>
                     <input type="text" class="form-control" id="ddd" name="DDD">
                 </div>
-                <div class="form-group col-md-4" >
+                <div class="form-group col-md-4">
                     <label for="inputEstado">Celular</label>
                     <input type="text" class="form-control" id="celular" name="txtCelular">
                 </div>
             </div>
-            
-            <button type="button" class="btn btn-success" onclick="checar()">checar</button>
-            <button type="submit" class="btn btn-primary">Limpar</button>
+
+            <div class="container">
+                <div class="row d-flex justify-content-start my-3">
+                    <button type="button" class="btn btn-success mr-3" onclick="checar()">checar</button>
+                    <button type="submit" class="btn btn-primary">Limpar</button>
+                </div>
+            </div>
         </form>
     </div>
     <script src="app.js"></script>
