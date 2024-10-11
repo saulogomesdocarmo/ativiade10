@@ -9,14 +9,6 @@ function buscarEndereco() {
     let cep = document.getElementById('cep').value
     let urlAPI = `https://viacep.com.br/ws/${cep}/json/`
 
-    if(frmCadastro.txtNome.value === ""){
-        alert("Coloque seu nome")
-    }else if(frmCadastro.txtEmail.value === ""){
-        alert("Coloque seu email")
-    }else if(frmCadastro.txtCelular.value === ""){
-        alert("Coloque o seu celular")
-    }
-
     fetch(urlAPI)
         .then((response) => {
             return response.json()
@@ -29,7 +21,22 @@ function buscarEndereco() {
             document.getElementById('uf').value = dados.uf
             document.getElementById('ddd').value = dados.ddd
         })
-        .catch((erro) => {
+        .catch((error) => {
             console.error('Erro ao buscar o endereço')
         })
 }
+
+function checar() {
+    if (frmCadastro.txtNome.value === "") {
+        alert("Coloque seu nome")
+    } else if (frmCadastro.txtEmail.value === "") {
+        alert("Coloque seu email")
+    } else if (frmCadastro.txtCelular.value === "") {
+        alert("Coloque o seu celular")
+    }else if(frmCadastro.txtCPF.value ===""){
+        alert("Coloque seu CPF")
+    }else{
+        
+    }
+} 
+
