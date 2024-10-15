@@ -19,8 +19,7 @@ function buscarEndereco() {
             document.getElementById('cidade').value = dados.localidade
             document.getElementById('estado').value = dados.estado
             document.getElementById('uf').value = dados.uf
-            document.getElementById('regiao').value = dados.regiao
-            document.getElementById('ddd').value = dados.ddd
+            document.getElementById('ddd').value = dados.ddd;
         })
         .catch((error) => {
             console.error('Erro ao buscar o endereço')
